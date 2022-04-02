@@ -1,0 +1,76 @@
+########## Numerical Features
+
+1. PassengerId
+   To drop as irrelevant
+
+2. 'Survived' (Target)
+    Observations: We note that the target variable is not balanced. We need to use some undersampling or oversampling techniques
+    
+3. 'Pclass'
+    Observations
+    There are a higher no. of 3rd class than 1st and 2nd class combined.
+    There are higher no. of first class than second class passengers
+    The raw count suggests that being in 1st class gives the highest chance of survival, while the chances of survival decreases the lower your class
+    
+4. 'Age' (MISSING VALUES - OUTLIERS PRESENT - median)
+    - Since Age has some outliers, we use the median to impute the missing values, meanwhile we impute missing values in "Embarked" with S
+    The distribution chart confirms that most of the passanger age is between "26-36" in the data.
+    The chart confirms that the passanger whose age between "26-36"are more likely survived.
+    The chart confirms that the passanger whose age more than "62" are more likely dead.
+    
+    
+5. 'SibSp'
+    Observations
+    Majority of the passengers do not have siblings/spouse. Roughly 32% have at least one sibling/spouse.
+    Out of those that died, a higher percentage of them do not have a sibling/spouse
+    55% of the people that have siblings/spouse survive, while only 45% of those that do not have siblings/spouse survive.
+    We can conclude that having siblings/spouses will have higher odds of survival.
+    On further inspection, we notice that those that have 2 or more siblings/spouse have higher odds of survival
+    
+6. 'Parch'
+    Observations
+    From the data, we notice that a higher percentage of people that did not survive did not have parents/children. Although a higher percentage of people that had parents/children also did not survive, the percentage of people that were alone that died is still higher
+    On closer inspection, we notice that family sizes between 2 and 4 had the highest chances of survival. Singles, and those that had family sizes of 5 and more have lower chances of survival
+
+7. 'Fare'
+     The distribution chart confirms that we have a higher no. of "1" than other in the data.
+     The chart confirms that whose fare is "2" are more likely survived.
+     The chart confirms that whose fare is "5" are more likely dead.
+
+########## Categorical Features
+
+1. 'Name'
+    Confirms our earlier finding that females tend to have a higher survival rate
+    Highest title count = "Mr"
+    Males that have the 'master' or 'dr' title tend to have higher surival rates
+    Individuals with more prestigious titles have a higher survial rate
+    
+    
+2. 'Sex'
+    Observations:
+    There are different no. of males and females
+    Females are more likely to survive compared to males
+    
+3. 'Ticket'
+    To drop as irrelevant
+
+
+4. 'Cabin'
+    More than 40 % of missing values. Only first class passengers have cabins, the rest are unknown.
+    
+    
+5. 'Embarked' (MISSING VALUES PRESENT - FILL WITH MODE)
+    There are a larger proportion of passengers that have embarked from southampton. Queenstown has the least
+    Those that embarked from Queenstown and Southampton have a higher chance of dying. Those from southamption have a slightly higher chance of survival
+    
+    
+    
+########## Notable points
+
+- Since Age has some outliers, we use the median to impute the missing values, meanwhile we impute missing values in "Embarked" with S
+
+- "Cabin" column has too many missing features. We have to drop this feature.
+  "Ticket" is also dropped due to irrelevance
+  "PassengerId" is also dropped
+  
+- UNDERSAMPLE TO IMPROVE ACCURACY
